@@ -7,10 +7,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class Student {
     Gadget gadget;
+    Gadget specificGadget;
 
     @Autowired
-    public Student(@Qualifier("mobile") Gadget gadget) {
+    public Student(Gadget gadget, @Qualifier("mobile") Gadget specificGadget) {
         this.gadget = gadget;
+        this.specificGadget = specificGadget;
     }
 
     void study() {
@@ -19,5 +21,6 @@ public class Student {
 
     void workingWithGadget() {
         gadget.useGadget();
+        specificGadget.useGadget();
     }
 }

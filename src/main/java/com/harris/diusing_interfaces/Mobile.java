@@ -1,6 +1,6 @@
 package com.harris.diusing_interfaces;
 
-import org.springframework.context.annotation.Primary;
+
 import org.springframework.stereotype.Component;
 
 @Component
