@@ -1,12 +1,15 @@
 package com.harris.diusing_interfaces;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Student {
     Gadget gadget;
 
-    public Student(Gadget gadget) {
+    @Autowired
+    public Student(@Qualifier("mobile") Gadget gadget) {
         this.gadget = gadget;
     }
 
